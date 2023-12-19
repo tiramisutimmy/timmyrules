@@ -1,24 +1,11 @@
-
 DOMAIN,xvcf1.xboxlive.com
-
 DOMAIN,xz.pphimalayanrt.com
 DOMAIN,gleasy-my.sharepoint.com
 DOMAIN,tlu.dl.delivery.mp.microsoft.com
-
-DOMAIN,api.steampowered.com
-DOMAIN,*.cm.steampowered.com
+DOMAIN,steamcdn-a.akamaihd.net
 DOMAIN-SUFFIX,steamserver.net
-DOMAIN,test.steampowered.com
-DOMAIN-SUFFIX,steamcontent.com
-DOMAIN-SUFFIX,steamusercontent.com
-
-DOMAIN,blog.google
-DOMAIN,googletraveladservices.com
-DOMAIN,clientservices.googleapis.com
 DOMAIN,dl.google.com
 DOMAIN,dl.1.google.com
-DOMAIN,update.googleapis.com
-
 
 IP-CIDR,103.10.124.0/24
 IP-CIDR,103.10.125.0/24
