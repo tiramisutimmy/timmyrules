@@ -6,7 +6,6 @@ DOMAIN,steamcdn-a.akamaihd.net
 DOMAIN-SUFFIX,steamserver.net
 DOMAIN,dl.google.com
 DOMAIN,dl.1.google.com
-IP-CIDR,208.54.0.0/16
 IP-CIDR,103.10.124.0/24
 IP-CIDR,103.10.125.0/24
 IP-CIDR,103.28.54.0/24
