@@ -1,6 +1,7 @@
-
 #apple music
 DOMAIN,streamingaudio.itunes.apple.com
 DOMAIN,streamingaudio.itunes.apple.com.download.ks-cdn.com
 DOMAIN,aod.itunes.apple.com
 DOMAIN,aod.itunes.apple.com.w.alikunlun.com
+#tmobile
+IP-CIDR,208.54.0.0/16
