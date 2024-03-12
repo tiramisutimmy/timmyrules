@@ -1,0 +1,48 @@
+# Merge Template for clash verge
+# The Merge format used to enhance profile
+
+mode: rule                            # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+ipv6: true                            # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+log-level: info                       # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
+mixed-port: 7890                      # 混合端口，HTTP和SOCKS5用一个端口
+unified-delay: true                   # 统一延迟，更换延迟计算方式，去除握手等额外延迟
+tcp-concurrent: true                  # 【Meta专属】TCP 并发连接所有 IP, 将使用最快握手的 TCP
+keep-alive-interval: 15               # TCP keep alive interval
+
+geodata-mode: true                    # 【Meta专属】使用geoip.dat数据库(默认：false使用mmdb数据库)
+geodata-loader: standard              # 【Meta专属】使用标准加载器加载GEO文件（会提升内存占用）
+geox-url:                             # 自定义GEO文件下载地址
+  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+geo-auto-update: true                 # 【Meta专属】启用自动更新GEO文件
+geo-update-interval: 24               # 【Meta专属】自动更新GEO文件间隔
+global-ua: clash.meta                 # 【Meta专属】自定义全局更新文件时的下载UA（默认：clash.meta）
+
+find-process-mode: strict             # 匹配所有进程（always/strict/off）
+global-client-fingerprint: chrome     # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint
+                                      # 可选： "chrome","firefox","safari","ios","random","none" options.
+
+profile:
+  store-selected: true                # 存储 select 选择记录
+  store-fake-ip: true                 # 持久化 fake-ip
+
+dns:
+  enable: true                        # 关闭将使用系统 DNS
+  ipv6: true                          # IPV6解析开关；如果为false，将返回ipv6结果为空
+  enhanced-mode: fake-ip              # 模式：redir-host或fake-ip
+  listen: 0.0.0.0:1053                # DNS 监听地址
+  use-hosts: true                     # 是否查询系统 hosts
+  fake-ip-range: 198.18.0.1/16        # fakeip 下的 IP 段设置，tun 网卡的默认 ip 也使用此值
+  fake-ip-filter: ['+.lan', '+.msftncsi.com', 'msftconnecttest.com', '+.msftconnecttest.com', '*.msftncsi.com', '*.msftconnecttest.com']
+                                      # Fake-ip 过滤，列表中的域名返回真实IP
+  default-nameserver: [192.168.50.15]
+                                      # 解析非IP的dns用的dns服务器，只支持纯IP，（Meta可为其加密）
+  nameserver: [192.168.50.15]
+                                      # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+  proxy-server-nameserver: [192.168.50.16]
+                                      # 代理DNS服务器，支持udp/tcp/dot/doh/doq
+  nameserver-policy:
+    "geosite:cn,private,bytedance,steam@cn,epicgames,microsoft@cn,apple@cn": [192.168.50.15]
+    "geosite:speedtest": ["https://1.1.1.1/dns-query#Proxy"]
+                                      # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
