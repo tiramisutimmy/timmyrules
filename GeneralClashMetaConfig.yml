@@ -8,11 +8,12 @@ mixed-port: 7890                      # 混合端口，HTTP和SOCKS5用一个端
 socks-port: 7891
 port: 7892
 allow-lan: true
-external-controller: 0.0.0.0:9095
-secret: "KeeJ8bqDAEMv2Aowzu4orDDs"
-external-ui: /path/to/ui/folder
-external-ui-name: xd      #  合并为 external-ui/xd
-external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
+
+external-controller: 0.0.0.0:9090
+secret:            # 登陆ui的密码
+external-ui: ui       # webui的基础路径
+external-ui-name: xd  # webui的下级路径
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
 
 unified-delay: true                   # 统一延迟，更换延迟计算方式，去除握手等额外延迟
 tcp-concurrent: true                  # 【Meta专属】TCP 并发连接所有 IP, 将使用最快握手的 TCP
