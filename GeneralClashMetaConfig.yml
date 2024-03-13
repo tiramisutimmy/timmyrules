@@ -9,7 +9,10 @@ socks-port: 7891
 port: 7892
 allow-lan: true
 external-controller: 0.0.0.0:9095
-secret: ""
+secret: "KeeJ8bqDAEMv2Aowzu4orDDs"
+external-ui: /path/to/ui/folder
+external-ui-name: xd      #  合并为 external-ui/xd
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
 
 unified-delay: true                   # 统一延迟，更换延迟计算方式，去除握手等额外延迟
 tcp-concurrent: true                  # 【Meta专属】TCP 并发连接所有 IP, 将使用最快握手的 TCP
@@ -35,7 +38,7 @@ profile:
 
 dns:
   enable: true                        # 关闭将使用系统 DNS
-  ipv6: true                          # IPV6解析开关；如果为false，将返回ipv6结果为空
+  ipv6: false                         # IPV6解析开关；如果为false，将返回ipv6结果为空
   enhanced-mode: fake-ip              # 模式：redir-host或fake-ip
   listen: 0.0.0.0:1053                # DNS 监听地址
   use-hosts: true                     # 是否查询系统 hosts
