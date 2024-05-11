@@ -1,0 +1,2 @@
+DOMAIN-SUFFIX,myhomesurge,DEVICE:macmini-m1
+IP-CIDR,192.168.50.0/24,DEVICE:macmini-m1
