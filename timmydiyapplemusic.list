@@ -5,3 +5,7 @@ DOMAIN,aod.itunes.apple.com
 DOMAIN,aod.itunes.apple.com.w.alikunlun.com
 #tmobile
 IP-CIDR,208.54.0.0/16
+# AppleTV
+DOMAIN,np-edge.itunes.apple.com
+DOMAIN,play-edge.itunes.apple.com
+DOMAIN-SUFFIX,tv.apple.com
