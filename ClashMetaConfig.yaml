@@ -1,6 +1,7 @@
 #---------------------------------------------------#
 # 配置文件需要放置在 $HOME/.config/clash/config.yml
 # 或者运行目录下的config.yml
+# 纯本地自用 参考需要修改好几处 大量metaonly配置
 #---------------------------------------------------#
 
 
@@ -399,7 +400,7 @@ dns:
 proxy-providers:
   nextrojan:
     type: http
-    url: "http://192.168.50.186:25500/sub?target=clash&url=xxxxxx&append_type=true&emoji=true&list=true&tfo=false&fdn=false&sort=true&udp=true&scv=true"
+    url: "http://127.0.0.1:25500/sub?target=clash&url=xxxxxx&append_type=true&emoji=true&list=true&tfo=false&fdn=false&sort=true&udp=true&scv=true"
 
     interval: 1296000
     path: ./proxies/nextrojan.yaml
