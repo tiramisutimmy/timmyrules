@@ -15,6 +15,9 @@ ipv6 = true
 # > always ：始终使用 IPv6 设置 Surge VIF
 ipv6-vif = auto
 
+#控制是否让 Surge for Mac 读取 /etc/hosts 文件并在 Surge DNS 中模拟该行为。
+#read-etc-hosts = true
+
 # > dns服务器 上游DNS服务器的IP地址
 dns-server = 223.5.5.5, 119.29.29.29
 # > 劫持DNS,默认情况下，Surge 仅返回发送到 Surge DNS 地址 （198.18.0.2） 的 DNS 查询的虚假 IP 地址。发送到标准 DNS 的查询将被转发。某些设备或软件始终使用硬编码的 DNS 服务器。（例如，Google Speakers始终使用 8.8.8.8）。您可以使用此选项劫持查询以获取虚假地址。您可以使用 hijack-dns = *:53 劫持所有DNS查询
@@ -24,7 +27,7 @@ hijack-dns = 8.8.8.8:53, 8.8.4.4:53
 # > 加密 DNS 跟随出站模式,默认情况下，加密的 DNS 查找使用直接出站。启用该选项将使 DOH 遵循出站模式设置和规则。
 encrypted-dns-follow-outbound-mode = true
 #  加密的 DNS 服务器,加密的 DNS 服务器的 URL。如果配置了加密 DNS，则传统 DNS 将仅用于测试连接并解析加密 DNS URL 中的域。
-encrypted-dns-server = https://223.5.5.5/dns-query,quic://223.5.5.5:853
+encrypted-dns-server = https://223.5.5.5/dns-query,quic://223.6.6.6:853
 # , https://8.8.8.8/dns-query, https://1.1.1.1/dns-query
 # 跳过加密的DNS服务器证书验证，这是不安全的。
 # encrypted-dns-skip-cert-verification = false
@@ -42,7 +45,7 @@ exclude-simple-hostnames = true
 # > 使用 HTTPS 协议而不是 HTTP。必须先配置 MitM CA 证书。您需要在客户端设备上手动安装证书。
 # http-api-tls =
 # > 启用此功能后，您可以通过 Web 浏览器控制 Surge。
-# http-api-web-dashboard = true
+http-api-web-dashboard = false
 
 # > 显示错误页面拒绝,如果请求是纯 HTTP 请求，则显示 REJECT 策略的错误网页。
 show-error-page-for-reject = true
@@ -54,9 +57,10 @@ show-error-page-for-reject = true
 # tun-included-routes =
 
 # > Internet 连接测试的 URL, 以及，DIRECT 策略的测试 URL
-internet-test-url = http://223.6.6.6
+internet-test-url = http://www.qualcomm.cn/generate_204
 # > 代理策略的默认测试 URL
-proxy-test-url = http://1.0.0.1/generate_204
+proxy-test-url = http://cp.cloudflare.com/generate_204
+proxy-test-udp = www.apple.com@64.6.64.6
 # > 连接测试超时（秒）
 test-timeout = 5
 
@@ -81,7 +85,7 @@ use-local-host-item-for-proxy = true
 allow-dns-svcb = false
 
 # > UDP 流量与不支持 UDP 中继的策略匹配时的回退行为,可能的值： DIRECT 、 REJECT, 如果没有代理服务器支持 UDP 转发，可修改为「 direct 」或注释下条，但需注意同一目标主机名 TCP 请求与 UDP 请求的源地址不同所造成的隐私及安全风险。
-# udp-policy-not-supported-behaviour = REJECT
+udp-policy-not-supported-behaviour = REJECT
 # > 代理的默认 UDP 测试参数, 例如： apple.com@8.8.8.8
 # proxy-test-udp = apple.com@8.8.8.8
 # > 当系统负载非常高且数据包处理延迟时，启用将优先处理 UDP 数据包。也称为游戏模式
