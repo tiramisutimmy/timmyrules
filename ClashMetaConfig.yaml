@@ -84,7 +84,7 @@ dns:
   enable: true                        # 关闭将使用系统 DNS
   ipv6: false                         # IPV6解析开关；如果为false，将返回ipv6结果为空
 # 如果DNS服务器支持DoH3会优先使用h3
-#  prefer-h3: true
+#  prefer-h3: false
 
 # 配置后面的nameserver、fallback和nameserver-policy向dns服务器的连接过程是否遵守遵守rules规则
 # 如果为false（默认值）则这三部分的dns服务器在未特别指定的情况下会直连
