@@ -405,7 +405,7 @@ proxies:
     dialer-proxy: dialer
     
 proxy-providers:
-  subs:
+  kur:
     type: http
     url: subs链接
     interval: 1296000
@@ -421,7 +421,11 @@ proxy-providers:
 #      skip-cert-verify: true
 #      udp: true
 #      ip-version: ipv4-prefer
-
+     additional-prefix: "kur"
+  nex:
+     .......
+     additional-prefix: "nex"
+     
 proxy-groups:
   - {name: dialer, type: select, proxies: [节点选择]}
   - {name: 节点选择, type: select, proxies: [DIRECT, 欧洲节点, hetzner欧洲, 香港节点, 日本节点, 狮城节点, 美国节点]}
