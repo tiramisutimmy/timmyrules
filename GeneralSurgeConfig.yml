@@ -15,9 +15,6 @@ ipv6 = false
 # > always ：始终使用 IPv6 设置 Surge VIF
 ipv6-vif = off
 
-#控制是否让 Surge for Mac 读取 /etc/hosts 文件并在 Surge DNS 中模拟该行为。
-read-etc-hosts = true
-
 # > dns服务器 上游DNS服务器的IP地址
 dns-server = 223.5.5.5, 119.29.29.29
 # > 劫持DNS,默认情况下，Surge 仅返回发送到 Surge DNS 地址 （198.18.0.2） 的 DNS 查询的虚假 IP 地址。发送到标准 DNS 的查询将被转发。某些设备或软件始终使用硬编码的 DNS 服务器。（例如，Google Speakers始终使用 8.8.8.8）。您可以使用此选项劫持查询以获取虚假地址。您可以使用 hijack-dns = *:53 劫持所有DNS查询
