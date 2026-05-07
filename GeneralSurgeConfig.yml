@@ -8,12 +8,12 @@
 # > 日志级别 verbose, info, notify, or warning 不建议在日常使用中启用详细，因为这会显著降低性能。
 loglevel = notify
 # > IPv6协议 启用完整的 IPv6 支持。具体来说，开启该选项后，访问域名时会查询该域名的AAAA记录。即使未启用此选项，也可以通过直接访问 IPv6 地址来访问 IPv6 站点。
-ipv6 = false
+ipv6 = true
 # > 允许 IPv6 通过 Surge VIF。当您希望 Surge 处理连接到 IPv6 地址的原始 TCP 连接时很有用。
 # > off ：切勿使用 IPv6 设置 Surge VIF
 # > auto ：仅当本地网络具有有效的 IPv6 网络时，才使用 IPv6 设置 Surge VIF
 # > always ：始终使用 IPv6 设置 Surge VIF
-ipv6-vif = off
+ipv6-vif = auto
 
 # > dns服务器 上游DNS服务器的IP地址
 dns-server = 223.5.5.5, 119.29.29.29
@@ -95,6 +95,6 @@ udp-policy-not-supported-behaviour = REJECT
 # > 代理的默认 UDP 测试参数, 例如： apple.com@8.8.8.8
 # proxy-test-udp = apple.com@8.8.8.8
 # > 当系统负载非常高且数据包处理延迟时，启用将优先处理 UDP 数据包。也称为游戏模式
-# udp-priority = true
+udp-priority = true
 # > Surge 将自动嗅探发送到端口 80 和 443 的 TCP 请求的协议，从而在优化性能的同时启用高级 HTTP/HTTPS 功能。但是，这可能会导致一些兼容性问题。如果遇到问题，可以在此处添加主机名，Surge 不会嗅探这些请求的协议。此参数属于主机列表类型，详细规则请参见：https://manual.nssurge.com/others/host-list.html
-# always-raw-tcp-hosts = *.baidu.com
+always-raw-tcp-hosts = *.baidu.com, *.qq.com, *.weibo.com, *.taobao.com, *.tmall.com, *.jd.com, *.alicdn.com, *.aliyun.com, *.mi.com, *.xiaomi.com, *.sina.com.cn
