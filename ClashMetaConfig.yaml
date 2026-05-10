@@ -426,20 +426,20 @@ proxy-groups:
   - {name: 节点选择, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
 #  - {name: 网络测试, type: select, proxies: [节点选择, DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
   - {name: 电报消息, type: select, proxies: [节点选择, 香港节点, 日本节点, 狮城节点, 美国节点]}
-  - {name: AI平台, type: select, proxies: [节点选择, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
+  - {name: AI平台, type: select, proxies: [美国节点, 狮城节点, 日本节点]}
   - {name: 测速, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
   - {name: 静态资源, type: select, proxies: [香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
-  - {name: 油管视频, type: select, proxies: [节点选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
-  - {name: 奈飞视频, type: select, proxies: [节点选择, 香港节点, 台湾节点, 狮城节点]}
-  - {name: 巴哈姆特, type: select, proxies: [节点选择, 台湾节点]}
+  - {name: 油管视频, type: select, proxies: [节点选择, 香港节点, 日本节点, 狮城节点]}
+  - {name: 奈飞视频, type: select, proxies: [狮城节点, 香港节点]}
+  - {name: 巴哈姆特, type: select, proxies: [台湾节点]}
   - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点]}
-  - {name: 国外媒体, type: select, proxies: [节点选择, DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
-  - {name: 国内媒体, type: select, proxies: [节点选择, DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
-  - {name: 谷歌FCM, type: select, proxies: [节点选择, DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
-  - {name: 微软Bing, type: select, proxies: [节点选择, DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
-  - {name: 微软云盘, type: select, proxies: [节点选择, DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
-  - {name: 微软服务, type: select, proxies: [节点选择, DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
-  - {name: 苹果服务, type: select, proxies: [节点选择, DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
+  - {name: 国外媒体, type: select, proxies: [节点选择, 香港节点, 日本节点, 狮城节点]}
+  - {name: 国内媒体, type: select, proxies: [DIRECT]}
+  - {name: 谷歌FCM, type: select, proxies: [DIRECT, 香港节点]}
+  - {name: 微软Bing, type: select, proxies: [DIRECT, 香港节点, 日本节点, 狮城节点, 节点选择]}
+  - {name: 微软云盘, type: select, proxies: [DIRECT, 香港节点, 日本节点, 狮城节点, 节点选择]}
+  - {name: 微软服务, type: select, proxies: [DIRECT, 香港节点, 日本节点, 狮城节点, 节点选择]}
+  - {name: 苹果服务, type: select, proxies: [DIRECT, 香港节点, 日本节点, 狮城节点, 节点选择]}
   - {name: 游戏平台, type: select, proxies: [DIRECT, 香港节点]}
 #  - {name: 网易音乐, type: select, proxies: [DIRECT, 网易音乐节点]}
   - {name: 全球直连, type: select, proxies: [DIRECT, 节点选择]}
@@ -452,6 +452,8 @@ proxy-groups:
   - {name: 狮城节点, type: select, include-all-providers: true, filter: "(?i)新加坡|坡|狮城|SG|Singapore"}
   - {name: 台湾节点, type: select, include-all-providers: true, filter: "(?i)台|新北|彰化|TW|Taiwan"}
   - {name: 韩国节点, type: select, include-all-providers: true, filter: "(?i)KR|Korea|KOR|首尔|韩|韓"}
+  - {name: 欧洲节点, type: select, include-all-providers: true, filter: "(?i)United Kingdom|Germany|Sweden|Switzerland|Ireland|France|Turkey|Bulgaria|Hungary"}
+  - {name: 手动切换, type: select, include-all-providers: true}
 #  - {name: 网易音乐节点, type: select, include-all-providers: true, filter: "(?i)网易|音乐|解锁|Music|NetEase"}
 #  - {name: 奈飞节点, type: select, include-all-providers: true, filter: "(?i)NF|奈飞|解锁|Netflix|NETFLIX|Media"}
 
