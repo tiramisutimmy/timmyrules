@@ -94,7 +94,7 @@ dns:
   respect-rules: true
   
   enhanced-mode: fake-ip              # 模式：redir-host或fake-ip
-  listen: 0.0.0.0:1053                # DNS 监听地址
+  listen: 0.0.0.0:53                # DNS 监听地址
 #  use-hosts: true                     # 是否查询系统 hosts
   
   fake-ip-range: 198.18.0.1/16        # fakeip 下的 IP 段设置，tun 网卡的默认 ip 也使用此值
