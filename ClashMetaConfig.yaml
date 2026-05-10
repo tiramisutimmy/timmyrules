@@ -401,11 +401,11 @@ dns:
 #    - "+.push.apple.com"
   
 proxy-providers:
-  kur:
+  sub01:
     type: http
-    url: "http://127.0.0.1:25500/sub?target=clash&url=xxxxxx&append_type=true&emoji=true&list=true&tfo=false&fdn=false&sort=true&udp=true&scv=true"
+    url: "xxxxxxxx"
     interval: 1296000
-    path: ./proxies/nextrojan.yaml
+    path: ./proxies/sub01.yaml
     health-check:
       enable: false
       lazy: true
@@ -417,10 +417,10 @@ proxy-providers:
 #      skip-cert-verify: true
 #      udp: true
 #      ip-version: ipv4-prefer
-     additional-prefix: "kur"
-  nex:
+     additional-prefix: "sub01"
+  sub02:
      .......
-     additional-prefix: "nex"
+     additional-prefix: "sub02"
      
 proxy-groups:
   - {name: 节点选择, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 韩国节点]}
