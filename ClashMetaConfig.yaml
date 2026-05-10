@@ -953,7 +953,7 @@ rule-providers:
     behavior: domain
     format: text
     interval: 43200
-    url: https://ruleset.skk.moe/Clash/domainset/apple_cdn.txt
+    url: https://ruleset.skk.moe/Clash/non_ip/apple_cdn.txt
     path: ./sukkaw_ruleset/apple_cdn.txt
     
   apple_services:
