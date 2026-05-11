@@ -1,14 +1,5 @@
 #https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/separate-config.md
-# Separate Configuration Files
 
-Sometimes you want to break your configuration file into several files. It may be useful in the following cases:
-
-1. You want to switch nodes via modify the config file using tools like `sed`.
-2. You copy other's configuration file and you want to overwrite some parts of it.
-
-## Example
-
-Directory Structure:
 
 ```sh
 # tree /etc/dae
@@ -22,13 +13,6 @@ Directory Structure:
 
 
 
-Config files:
-
-Notes about `include` paths:
-
-- Relative paths (for example `config.d/*.dae`) are resolved relative to the directory of the *entry* config file (the file passed to `dae -c ...`), not relative to the current working directory.
-- Absolute paths (for example `/etc/dae/config.d/*.dae`) are used as-is.
-- For security reasons, dae only allows included files under the entry config directory.
 
 ```jsonc
 # config.dae
